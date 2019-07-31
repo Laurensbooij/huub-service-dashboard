@@ -17,7 +17,11 @@ const VehicleListItem = ({ vehicle }) => (
 );
 
 VehicleListItem.propTypes = {
-  vehicle: PT.object,
+  vehicle: PT.shape({
+    vehicleId: PT.string,
+    mainBatteryPercentage: PT.number,
+    lockBatteryPercentage: PT.number,
+  }).isRequired,
 };
 
 export default VehicleListItem;

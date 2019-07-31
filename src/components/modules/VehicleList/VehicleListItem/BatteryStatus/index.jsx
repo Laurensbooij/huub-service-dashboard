@@ -33,8 +33,8 @@ const BatteryStatus = ({ batteryType, batteryPercentage }) => (
 );
 
 BatteryStatus.propTypes = {
-  batteryType: PT.string,
-  batteryPercentage: PT.number,
+  batteryType: PT.string.isRequired,
+  batteryPercentage: PT.number.isRequired,
 };
 
 export default BatteryStatus;

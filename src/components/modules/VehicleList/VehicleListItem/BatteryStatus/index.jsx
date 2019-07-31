@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PT from 'prop-types';
 
-import getBatteryIcon from 'services/getBatteryIcon'
+import getBatteryIcon from 'services/getBatteryIcon';
 
 const Container = styled.div`
   display: flex;

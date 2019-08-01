@@ -23,7 +23,10 @@ PageHeaderBarContainer.propTypes = {
   to: PT.string.isRequired,
   title: PT.string.isRequired,
   subTitle: PT.string.isRequired,
-  children: PT.object,
+  children: PT.oneOfType([
+    PT.array,
+    PT.object,
+  ]),
 };
 
 export default PageHeaderBarContainer;

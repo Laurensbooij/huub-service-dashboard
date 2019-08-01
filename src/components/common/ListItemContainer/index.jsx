@@ -24,15 +24,16 @@ export const ChevronIcon = styled(ChevronIconSvg)`
   transform: scale(0.5);
 `;
 
-const ListItemContainer = ({ children }) => (
-  <Container>
+const ListItemContainer = ({ children, className }) => (
+  <Container className={className}>
     {children}
     <ChevronIcon/>
   </Container>
 );
 
 ListItemContainer.propTypes = {
-  children: PT.object.isRequired,
+  children: PT.array.isRequired,
+  className: PT.string,
 };
 
 export default ListItemContainer;

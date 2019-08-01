@@ -1,19 +1,20 @@
 import React from 'react';
 import PT from 'prop-types';
 
-import { Container, VehicleName, BatteryIconsContainer, ChevronIcon } from './styled';
+import ListItemContainer from 'common/ListItemContainer';
+
+import { VehicleName, BatteryIconsContainer } from './styled';
 
 import BatteryStatus from './BatteryStatus';
 
 const VehicleListItem = ({ vehicle }) => (
-  <Container>
+  <ListItemContainer>
     <VehicleName>{vehicle.vehicleId}</VehicleName>
     <BatteryIconsContainer>
       <BatteryStatus batteryType="main" batteryPercentage={vehicle.mainBatteryPercentage}/>
       <BatteryStatus batteryType="lock" batteryPercentage={vehicle.lockBatteryPercentage}/>
     </BatteryIconsContainer>
-    <ChevronIcon />
-  </Container>
+  </ListItemContainer>
 );
 
 VehicleListItem.propTypes = {

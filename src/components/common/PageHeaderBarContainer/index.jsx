@@ -5,7 +5,7 @@ import PT from 'prop-types';
 import HeaderBar from './HeaderBar';
 
 const PageContainer = styled.main`
-  margin-top: 60px;
+  padding-top: 60px;
 `;
 
 const PageHeaderBarContainer = ({ to, title, subTitle, children }) => (

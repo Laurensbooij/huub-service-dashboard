@@ -1,7 +1,6 @@
 import React from 'react';
 
-import HeaderBar from 'common/HeaderBar';
-import PageContainer from 'common/PageContainer';
+import PageHeaderBarContainer from 'common/PageHeaderBarContainer';
 
 import VehicleListItem from './VehicleListItem';
 
@@ -55,19 +54,18 @@ class VehicleList extends React.Component {
     } = mockData;
 
     return (
-      <PageContainer>
-        <HeaderBar
-          to="/prev"
-          title={vehicleTypes[0].vehicleType}
-          subTitle={name}
-        />
+      <PageHeaderBarContainer
+        to="/prev"
+        title={vehicleTypes[0].vehicleType}
+        subTitle={name}
+      >
         {vehicleTypes[0].vehicles.map((vehicle) => (
           <VehicleListItem
             key={vehicle.vehicleId}
             vehicle={vehicle}
           />
         ))}
-      </PageContainer>
+      </PageHeaderBarContainer>
     );
   }
 }

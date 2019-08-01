@@ -44,9 +44,9 @@ const HeaderBar = ({ to, title, subTitle }) => (
 );
 
 HeaderBar.propTypes = {
-  to: PT.string,
-  title: PT.string,
-  subTitle: PT.string,
+  to: PT.string.isRequired,
+  title: PT.string.isRequired,
+  subTitle: PT.string.isRequired,
 };
 
 export default HeaderBar;

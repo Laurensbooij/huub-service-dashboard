@@ -6,7 +6,7 @@ import getBatteryIcon from 'services/getBatteryIcon';
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 
   &:not(:first-of-type) {
     margin: 0 0 0 20px;
@@ -15,11 +15,14 @@ const Container = styled.div`
 
 const Text = styled.p`
   font-size: 16px;
-  margin: 0 0 0 6px;
+  margin: 0 0 1px 6px;
   color: ${(props) => props.theme.colors.accent.grey};
 `;
 
 const Icon = styled.div`
+  display: flex;
+  align-items: center;
+
   svg {
     transform: scale(0.8);
   }

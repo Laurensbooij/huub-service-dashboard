@@ -1,9 +1,9 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import PT from 'prop-types';
 
-const CarIconSvg = lazy(() => import('app/static/vectors/vehicles/vehicle-car.svg'));
-const ScooterIconSvg = lazy(() => import('app/static/vectors/vehicles/vehicle-scooter.svg'));
-const BikeIconSvg = lazy(() => import('app/static/vectors/vehicles/vehicle-bike.svg'));
+import CarIconSvg from 'app/static/vectors/vehicles/vehicle-car.svg';
+import ScooterIconSvg from 'app/static/vectors/vehicles/vehicle-scooter.svg';
+import BikeIconSvg from 'app/static/vectors/vehicles/vehicle-bike.svg';
 
 const getBatteryIcon = (vehicleType) => {
   if (vehicleType === 'middenklasser') {

@@ -7,25 +7,22 @@ import vehicleOverviewData from 'services/data/vehicleOverview.js';
 import PageHeaderBarContainer from 'common/PageHeaderBarContainer';
 import VehicleTypeList from './VehicleTypeList';
 
-class VehicleOverview extends React.Component {
-  render() {
-    const { huubSpots } = vehicleOverviewData;
-    const { match: { params } } = this.props;
+const VehicleOverview = ({ match: { params } }) => {
+  const { huubSpots } = vehicleOverviewData;
 
-    const huubSpot = huubSpots[params.huubSpot];
-    const { huubSpotName, vehicleTypes } = huubSpot;
+  const huubSpot = huubSpots[params.huubSpot];
+  const { huubSpotName, vehicleTypes } = huubSpot;
 
-    return (
-      <PageHeaderBarContainer
-        to="/"
-        title="Voertuigen"
-        subTitle={huubSpotName}
-      >
-        <VehicleTypeList vehicleTypes={vehicleTypes}/>
-      </PageHeaderBarContainer>
-    );
-  }
-}
+  return (
+    <PageHeaderBarContainer
+      to="/"
+      title="Voertuigen"
+      subTitle={huubSpotName}
+    >
+      <VehicleTypeList vehicleTypes={vehicleTypes}/>
+    </PageHeaderBarContainer>
+  );
+};
 
 VehicleOverview.propTypes = {
   match: PT.shape({

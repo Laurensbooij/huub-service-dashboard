@@ -1,65 +1,27 @@
 import React from 'react';
+import PT from 'prop-types';
+import { withRouter } from 'react-router-dom';
+
+import vehicleData from 'services/data/vehicles';
 
 import PageHeaderBarContainer from 'common/PageHeaderBarContainer';
 
 import VehicleListItem from './VehicleListItem';
 
-const mockData = {
-  huubSpot: {
-    name: 'Schoonschip',
-    city: 'Amsterdam',
-    vehicleTypes: [
-      {
-        vehicleType: 'middenklasser',
-        vehicles: [
-          {
-            vehicleId: 'ABC-1-A',
-            mainBatteryPercentage: 91,
-            lockBatteryPercentage: 53,
-          },
-          {
-            vehicleId: 'AAC-2-B',
-            mainBatteryPercentage: 64,
-            lockBatteryPercentage: 97,
-          },
-          {
-            vehicleId: 'ABB-1-C',
-            mainBatteryPercentage: 65,
-            lockBatteryPercentage: 73,
-          },
-          {
-            vehicleId: 'BAB-3-C',
-            mainBatteryPercentage: 20,
-            lockBatteryPercentage: 46,
-          },
-          {
-            vehicleId: 'CCA-2-A',
-            mainBatteryPercentage: 87,
-            lockBatteryPercentage: 20,
-          },
-        ],
-      },
-    ],
-  },
-};
-
 class VehicleList extends React.Component {
 
   render() {
-    const {
-      huubSpot: {
-        name,
-        vehicleTypes,
-      },
-    } = mockData;
+    const { match: { params } } = this.props;
+    const huubSpotName = vehicleData[params.huubSpot].huubSpotName;
+    const vehicleList = vehicleData[params.huubSpot].vehicles[params.vehicleType];
 
     return (
       <PageHeaderBarContainer
-        to="/prev"
-        title={vehicleTypes[0].vehicleType}
-        subTitle={name}
+        to={`/${params.huubSpot}/voertuigen/`}
+        title={params.vehicleType}
+        subTitle={huubSpotName}
       >
-        {vehicleTypes[0].vehicles.map((vehicle) => (
+        {vehicleList.map((vehicle) => (
           <VehicleListItem
             key={vehicle.vehicleId}
             vehicle={vehicle}
@@ -70,4 +32,10 @@ class VehicleList extends React.Component {
   }
 }
 
-export default VehicleList;
+VehicleList.propTypes = {
+  match: PT.shape({
+    params: PT.object,
+  }),
+};
+
+export default withRouter(VehicleList);

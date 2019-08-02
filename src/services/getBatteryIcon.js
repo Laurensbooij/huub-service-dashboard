@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import PT from 'prop-types';
 
-import MainBatteryEmptySvg from 'app/static/vectors/batteries/main-battery-empty.svg';
-import MainBatteryHalfSvg from 'app/static/vectors/batteries/main-battery-half.svg';
-import MainBatteryFullSvg from 'app/static/vectors/batteries/main-battery-full.svg';
-import LockBatteryEmptySvg from 'app/static/vectors/batteries/lock-battery-empty.svg';
-import LockBatteryHalfSvg from 'app/static/vectors/batteries/lock-battery-half.svg';
-import LockBatteryFullSvg from 'app/static/vectors/batteries/lock-battery-full.svg';
-
+const MainBatteryEmptySvg = lazy(() => import('app/static/vectors/batteries/main-battery-empty.svg'));
+const MainBatteryHalfSvg = lazy(() => import('app/static/vectors/batteries/main-battery-half.svg'));
+const MainBatteryFullSvg = lazy(() => import('app/static/vectors/batteries/main-battery-full.svg'));
+const LockBatteryEmptySvg = lazy(() => import('app/static/vectors/batteries/lock-battery-empty.svg'));
+const LockBatteryHalfSvg = lazy(() => import('app/static/vectors/batteries/lock-battery-half.svg'));
+const LockBatteryFullSvg = lazy(() => import('app/static/vectors/batteries/lock-battery-full.svg'));
 
 const getBatteryIcon = (batteryType, batteryPercentage) => {
   if (batteryType === 'main') {

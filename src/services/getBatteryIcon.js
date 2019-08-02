@@ -28,7 +28,7 @@ const getBatteryIcon = (batteryType, batteryPercentage) => {
     if (batteryPercentage < 90 && batteryPercentage > 30) {
       return <LockBatteryHalfSvg />;
     }
-    if (batteryPercentage < 30) {
+    if (batteryPercentage <= 30) {
       return <LockBatteryEmptySvg />;
     }
   }

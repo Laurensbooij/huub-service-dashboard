@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import ListItemContainer from 'common/ListItemContainer';
 import Paragraph from 'common/Paragraph';
@@ -21,4 +22,8 @@ export const Icon = styled.div`
 export const ExtendedParagraph = styled(Paragraph)`
   margin: 0 0 0 18px;
   text-transform: capitalize;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

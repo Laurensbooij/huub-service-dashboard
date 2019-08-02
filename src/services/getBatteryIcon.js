@@ -8,7 +8,6 @@ import LockBatteryEmptySvg from 'app/static/vectors/batteries/lock-battery-empty
 import LockBatteryHalfSvg from 'app/static/vectors/batteries/lock-battery-half.svg';
 import LockBatteryFullSvg from 'app/static/vectors/batteries/lock-battery-full.svg';
 
-
 const getBatteryIcon = (batteryType, batteryPercentage) => {
   if (batteryType === 'main') {
     if (batteryPercentage >= 90) {
@@ -17,7 +16,7 @@ const getBatteryIcon = (batteryType, batteryPercentage) => {
     if (batteryPercentage < 90 && batteryPercentage > 30) {
       return <MainBatteryHalfSvg />;
     }
-    if (batteryPercentage < 30) {
+    if (batteryPercentage <= 30) {
       return <MainBatteryEmptySvg />;
     }
   }
@@ -29,7 +28,7 @@ const getBatteryIcon = (batteryType, batteryPercentage) => {
     if (batteryPercentage < 90 && batteryPercentage > 30) {
       return <LockBatteryHalfSvg />;
     }
-    if (batteryPercentage < 30) {
+    if (batteryPercentage <= 30) {
       return <LockBatteryEmptySvg />;
     }
   }

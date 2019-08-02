@@ -1,19 +1,25 @@
 import React from 'react';
 import PT from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import getVehicleIcon from 'services/getVehicleIcon';
 
-import { ExtendedListItemContainer, Icon, ExtendedParagraph } from './styled';
+import { ExtendedListItemContainer, Icon, ExtendedParagraph, StyledLink } from './styled';
 
-const VehicleTypeListItem = ({ vehicleType }) => (
-  <ExtendedListItemContainer>
-    <Icon>{getVehicleIcon(vehicleType)}</Icon>
-    <ExtendedParagraph>{vehicleType}</ExtendedParagraph>
-  </ExtendedListItemContainer>
+const VehicleTypeListItem = ({ vehicleType, match: { params } }) => (
+  <StyledLink to={`/${params.huubSpot}/voertuigen/${vehicleType}`}>
+    <ExtendedListItemContainer>
+      <Icon>{getVehicleIcon(vehicleType)}</Icon>
+      <ExtendedParagraph>{vehicleType}</ExtendedParagraph>
+    </ExtendedListItemContainer>
+  </StyledLink>
 );
 
 VehicleTypeListItem.propTypes = {
   vehicleType: PT.string,
+  match: PT.shape({
+    params: PT.object,
+  }),
 };
 
-export default VehicleTypeListItem;
+export default withRouter(VehicleTypeListItem);

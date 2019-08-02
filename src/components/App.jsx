@@ -10,7 +10,8 @@ const App = () => (
     <GlobalStyle />
     <Suspense fallback={<span>loading</span>}>
       <Switch>
-        <Route path="/" component={VehicleOverview} exact />
+        <Route path="/:huubSpot/voertuigen" component={VehicleOverview} exact />
+        <Route path="/:huubSpot/voertuigen/:vehicleType" component={VehicleList} exact />
       </Switch>
     </Suspense>
   </>

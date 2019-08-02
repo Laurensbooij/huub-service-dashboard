@@ -4,7 +4,6 @@ import PT from 'prop-types';
 
 import ChevronIconSvg from 'app/static/vectors/chevron-right.svg';
 
-
 const Container = styled.div`
   padding: 12px 16px;
   border-bottom: 1px solid ${(props) => props.theme.colors.accent.lightgrey};

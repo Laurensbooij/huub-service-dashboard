@@ -1,6 +1,6 @@
 import React from 'react';
 import PT from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 
 import vehicleOverviewData from 'services/data/vehicleOverview.js';
 
@@ -9,8 +9,12 @@ import VehicleTypeList from './VehicleTypeList';
 
 const VehicleOverview = ({ match: { params } }) => {
   const { huubSpots } = vehicleOverviewData;
-
   const huubSpot = huubSpots[params.huubSpot];
+
+  if (!huubSpot) {
+    return <Redirect to="/" />;
+  }
+
   const { huubSpotName, vehicleTypes } = huubSpot;
 
   return (
@@ -26,7 +30,7 @@ const VehicleOverview = ({ match: { params } }) => {
 
 VehicleOverview.propTypes = {
   match: PT.shape({
-    params: PT.object,
+    params: PT.object.isRequired,
   }),
 };
 

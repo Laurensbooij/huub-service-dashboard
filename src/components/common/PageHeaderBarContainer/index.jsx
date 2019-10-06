@@ -20,9 +20,9 @@ const PageHeaderBarContainer = ({ to, title, subTitle, children }) => (
 );
 
 PageHeaderBarContainer.propTypes = {
-  to: PT.string.isRequired,
+  to: PT.string,
   title: PT.string.isRequired,
-  subTitle: PT.string.isRequired,
+  subTitle: PT.string,
   children: PT.oneOfType([
     PT.array,
     PT.object,

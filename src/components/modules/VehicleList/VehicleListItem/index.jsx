@@ -8,7 +8,7 @@ import { VehicleName, BatteryIconsContainer } from './styled';
 import BatteryStatus from './BatteryStatus';
 
 const VehicleListItem = ({ vehicle }) => (
-  <ListItemContainer>
+  <ListItemContainer toPath="/test">
     <VehicleName>{vehicle.vehicleId}</VehicleName>
     <BatteryIconsContainer>
       <BatteryStatus batteryType="main" batteryPercentage={vehicle.mainBatteryPercentage}/>

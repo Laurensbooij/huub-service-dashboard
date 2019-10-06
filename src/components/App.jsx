@@ -2,14 +2,16 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import GlobalStyle from 'styles';
 
-const VehicleOverview = lazy(() => import('modules/VehicleOverview'));
+const HuubSpotOverview = lazy(() => import('modules/HuubSpotOverview'));
 const VehicleList = lazy(() => import('modules/VehicleList'));
+const VehicleOverview = lazy(() => import('modules/VehicleOverview'));
 
 const App = () => (
   <>
     <GlobalStyle />
     <Suspense fallback={<span>loading</span>}>
       <Switch>
+        <Route path="/" component={HuubSpotOverview} exact />
         <Route path="/:huubSpot/voertuigen" component={VehicleOverview} exact />
         <Route path="/:huubSpot/voertuigen/:vehicleType" component={VehicleList} exact />
       </Switch>

@@ -9,8 +9,6 @@ const StyledLink = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: absolute;
-  left: 0;
   width: 60px;
   height: 100%;
 `;

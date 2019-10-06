@@ -90,7 +90,7 @@ export default {
           lockBatteryPercentage: 20,
         },
       ],
-      'e-scooters': [
+      'e-scooter': [
         {
           vehicleId: 'S 1',
           mainBatteryPercentage: 80,

@@ -2,20 +2,24 @@ import React from 'react';
 import PT from 'prop-types';
 
 import ActionButton from './ActionButton';
-import { Container, Title, SubTitle } from './styled';
+import HuubLogo from './HuubLogo';
+import { Container, TitlesContainer, Title, SubTitle } from './styled';
 
 const HeaderBar = ({ to, title, subTitle }) => (
   <Container>
-    <ActionButton to={to}/>
-    <Title>{title}</Title>
-    <SubTitle>{subTitle}</SubTitle>
+    {to ? <ActionButton to={to}/> : null}
+    <TitlesContainer>
+      <Title>{title}</Title>
+      {subTitle ? <SubTitle>{subTitle}</SubTitle> : null}
+    </TitlesContainer>
+    <HuubLogo/>
   </Container>
 );
 
 HeaderBar.propTypes = {
-  to: PT.string.isRequired,
+  to: PT.string,
   title: PT.string.isRequired,
-  subTitle: PT.string.isRequired,
+  subTitle: PT.string,
 };
 
 export default HeaderBar;

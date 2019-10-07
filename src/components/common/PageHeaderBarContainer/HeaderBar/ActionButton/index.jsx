@@ -18,10 +18,18 @@ const Icon = styled(ArrowBackSvg)`
   margin: 0 0 0 16px;
 `;
 
+const FillContainer = styled.div`
+  width: 60px;
+  height: 100%;
+`;
+
 const ActionButton = ({ to }) => (
-  <StyledLink to={to}>
-    <Icon />
-  </StyledLink>
+  to ?
+    <StyledLink to={to}>
+      <Icon />
+    </StyledLink>
+    :
+    <FillContainer/>
 );
 
 ActionButton.propTypes = {

@@ -7,7 +7,7 @@ import { Container, TitlesContainer, Title, SubTitle } from './styled';
 
 const HeaderBar = ({ to, title, subTitle }) => (
   <Container>
-    {to ? <ActionButton to={to}/> : null}
+    <ActionButton to={to}/>
     <TitlesContainer>
       <Title>{title}</Title>
       {subTitle ? <SubTitle>{subTitle}</SubTitle> : null}

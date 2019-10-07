@@ -33,7 +33,7 @@ const ActionButton = ({ to }) => (
 );
 
 ActionButton.propTypes = {
-  to: PT.string.isRequired,
+  to: PT.string,
 };
 
 export default ActionButton;

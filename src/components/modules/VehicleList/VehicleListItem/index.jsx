@@ -1,20 +1,20 @@
 import React from 'react';
 import PT from 'prop-types';
 
-import ListItemContainer from 'common/ListItemContainer';
-
-import { VehicleName, BatteryIconsContainer } from './styled';
+import LicensePlate from './LicensePlate';
+import { VehicleName, ExtendedListItemContainer } from './styled';
 
 import BatteryStatus from './BatteryStatus';
 
-const VehicleListItem = ({ vehicle }) => (
-  <ListItemContainer toPath="/test">
-    <VehicleName>{vehicle.vehicleId}</VehicleName>
-    <BatteryIconsContainer>
-      <BatteryStatus batteryType="main" batteryPercentage={vehicle.mainBatteryPercentage}/>
-      <BatteryStatus batteryType="lock" batteryPercentage={vehicle.lockBatteryPercentage}/>
-    </BatteryIconsContainer>
-  </ListItemContainer>
+const VehicleListItem = ({ vehicle, vehicleType }) => (
+  <ExtendedListItemContainer toPath="/test">
+    {vehicleType === 'middenklasser' ?
+      <LicensePlate vehicleLicense={vehicle.vehicleId}/>
+      :
+      <VehicleName>{vehicle.vehicleId}</VehicleName>}
+    <BatteryStatus batteryType="main" batteryPercentage={vehicle.mainBatteryPercentage}/>
+    <BatteryStatus batteryType="lock" batteryPercentage={vehicle.lockBatteryPercentage}/>
+  </ExtendedListItemContainer>
 );
 
 VehicleListItem.propTypes = {
@@ -23,6 +23,7 @@ VehicleListItem.propTypes = {
     mainBatteryPercentage: PT.number,
     lockBatteryPercentage: PT.number,
   }).isRequired,
+  vehicleType: PT.string.isRequired,
 };
 
 export default VehicleListItem;

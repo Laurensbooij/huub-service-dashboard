@@ -7,10 +7,7 @@ import getBatteryIcon from 'services/getBatteryIcon';
 const Container = styled.div`
   display: flex;
   align-items: flex-end;
-
-  &:not(:first-of-type) {
-    margin: 0 0 0 20px;
-  }
+  width: 53px;
 `;
 
 const Text = styled.p`

@@ -6,6 +6,7 @@ import vehicleData from 'services/data/vehicles';
 
 import PageHeaderBarContainer from 'common/PageHeaderBarContainer';
 
+import VehicleListLabels from './VehicleListLabels';
 import VehicleListItem from './VehicleListItem';
 
 const VehicleList = ({ match: { params } }) => {
@@ -24,10 +25,12 @@ const VehicleList = ({ match: { params } }) => {
       title={params.vehicleType}
       subTitle={huubSpotName}
     >
+      <VehicleListLabels/>
       {vehicleList.map((vehicle) => (
         <VehicleListItem
           key={vehicle.vehicleId}
           vehicle={vehicle}
+          vehicleType={params.vehicleType}
         />
       ))}
     </PageHeaderBarContainer>

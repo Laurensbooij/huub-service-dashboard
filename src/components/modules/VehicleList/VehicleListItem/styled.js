@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 
-export const VehicleName = styled.h2`
+import ListItemContainer from 'common/ListItemContainer';
+
+export const VehicleName = styled.h3`
   font-size: 16px;
   font-weight: 600;
+  min-width: 97px;
   color: ${(props) => props.theme.colors.primary.midnightblue};
-  margin: 0 0 10px 0;
+  margin: 0;
 `;
 
-export const BatteryIconsContainer = styled.div`
+export const ExtendedListItemContainer = styled(ListItemContainer)`
   display: flex;
+  align-items: center;
+
+  & > *:not(:nth-last-child(2)):not(:last-child) {
+    margin-right: 30px;
+  }
 `;

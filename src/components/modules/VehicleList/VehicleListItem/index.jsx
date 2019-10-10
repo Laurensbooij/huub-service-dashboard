@@ -1,13 +1,14 @@
 import React from 'react';
 import PT from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
-import LicensePlate from './LicensePlate';
+import LicensePlate from 'common/LicensePlate';
+import BatteryStatus from 'common/BatteryStatus';
+
 import { VehicleName, ExtendedListItemContainer } from './styled';
 
-import BatteryStatus from './BatteryStatus';
-
-const VehicleListItem = ({ vehicle, vehicleType }) => (
-  <ExtendedListItemContainer toPath="/test">
+const VehicleListItem = ({ match: { url }, vehicle, vehicleType }) => (
+  <ExtendedListItemContainer toPath={`${url}/${vehicle.vehicleId}`}>
     {vehicleType === 'middenklasser' ?
       <LicensePlate vehicleLicense={vehicle.vehicleId}/>
       :
@@ -18,6 +19,9 @@ const VehicleListItem = ({ vehicle, vehicleType }) => (
 );
 
 VehicleListItem.propTypes = {
+  match: PT.shape({
+    url: PT.string.isRequired,
+  }),
   vehicle: PT.shape({
     vehicleId: PT.string,
     mainBatteryPercentage: PT.number,
@@ -26,4 +30,4 @@ VehicleListItem.propTypes = {
   vehicleType: PT.string.isRequired,
 };
 
-export default VehicleListItem;
+export default withRouter(VehicleListItem);

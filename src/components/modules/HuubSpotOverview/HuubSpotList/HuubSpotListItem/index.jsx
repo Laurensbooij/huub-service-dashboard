@@ -13,9 +13,9 @@ const HuubSpotListItem = ({ huubSpotTitle, huubSpotCity, huubSpotSlug }) => (
 );
 
 HuubSpotListItem.propTypes = {
-  huubSpotTitle: PT.string,
-  huubSpotCity: PT.string,
-  huubSpotSlug: PT.string,
+  huubSpotTitle: PT.string.isRequired,
+  huubSpotCity: PT.string.isRequired,
+  huubSpotSlug: PT.string.isRequired,
 };
 
 export default HuubSpotListItem;

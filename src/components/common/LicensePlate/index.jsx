@@ -1,8 +1,8 @@
 import React from 'react';
 import PT from 'prop-types';
 
-const LicensePlate = ({ vehicleLicense }) => (
-  <svg width="97" height="24" xmlns="http://www.w3.org/2000/svg">
+const LicensePlate = ({ vehicleLicense, className }) => (
+  <svg className={className} width="97" height="24" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fillRule="evenodd">
       <rect stroke="#0B0C1E" fill="#F1F254" x=".5" y=".5" width="96" height="23" rx="3"/>
       <path d="M3 1h11v22H3c-1.1045695 0-2-.8954305-2-2V3c0-1.1045695.8954305-2 2-2z" fill="#5498F2"/>
@@ -26,6 +26,7 @@ const LicensePlate = ({ vehicleLicense }) => (
 
 LicensePlate.propTypes = {
   vehicleLicense: PT.string,
+  className: PT.string,
 };
 
 export default LicensePlate;

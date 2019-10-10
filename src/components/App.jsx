@@ -5,6 +5,7 @@ import GlobalStyle from 'styles';
 const HuubSpotOverview = lazy(() => import('modules/HuubSpotOverview'));
 const VehicleList = lazy(() => import('modules/VehicleList'));
 const VehicleOverview = lazy(() => import('modules/VehicleOverview'));
+const VehicleDetail = lazy(() => import('modules/VehicleDetail'));
 
 const App = () => (
   <>
@@ -14,6 +15,7 @@ const App = () => (
         <Route path="/" component={HuubSpotOverview} exact />
         <Route path="/:huubSpot/voertuigen" component={VehicleOverview} exact />
         <Route path="/:huubSpot/voertuigen/:vehicleType" component={VehicleList} exact />
+        <Route path="/:huubSpot/voertuigen/:vehicleType/:vehicleSlug" component={VehicleDetail} exact />
       </Switch>
     </Suspense>
   </>

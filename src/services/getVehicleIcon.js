@@ -5,7 +5,7 @@ import CarIconSvg from 'app/static/vectors/vehicles/vehicle-car.svg';
 import ScooterIconSvg from 'app/static/vectors/vehicles/vehicle-scooter.svg';
 import BikeIconSvg from 'app/static/vectors/vehicles/vehicle-bike.svg';
 
-const getBatteryIcon = (vehicleType) => {
+const getVehicleIcon = (vehicleType) => {
   if (vehicleType === 'middenklasser') {
     return <CarIconSvg/>;
   }
@@ -17,8 +17,8 @@ const getBatteryIcon = (vehicleType) => {
   }
 };
 
-getBatteryIcon.propTypes = {
+getVehicleIcon.propTypes = {
   vehicleType: PT.string,
 };
 
-export default getBatteryIcon;
+export default getVehicleIcon;

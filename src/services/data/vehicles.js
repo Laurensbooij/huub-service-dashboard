@@ -31,29 +31,29 @@ export default {
       ],
       'e-scooter': [
         {
-          vehicleId: 'S 1',
+          vehicleId: 'S1',
           mainBatteryPercentage: 60,
           lockBatteryPercentage: 64,
         },
         {
-          vehicleId: 'S 2',
+          vehicleId: 'S2',
           mainBatteryPercentage: 74,
           lockBatteryPercentage: 30,
         },
       ],
       'e-bike': [
         {
-          vehicleId: 'E 1',
+          vehicleId: 'E1',
           mainBatteryPercentage: 72,
           lockBatteryPercentage: 44,
         },
         {
-          vehicleId: 'E 2',
+          vehicleId: 'E2',
           mainBatteryPercentage: 74,
           lockBatteryPercentage: 80,
         },
         {
-          vehicleId: 'E 3',
+          vehicleId: 'E3',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 10,
         },
@@ -92,24 +92,24 @@ export default {
       ],
       'e-scooter': [
         {
-          vehicleId: 'S 1',
+          vehicleId: 'S3',
           mainBatteryPercentage: 80,
           lockBatteryPercentage: 54,
         },
       ],
       'e-bike': [
         {
-          vehicleId: 'E 1',
+          vehicleId: 'E4',
           mainBatteryPercentage: 62,
           lockBatteryPercentage: 84,
         },
         {
-          vehicleId: 'E 2',
+          vehicleId: 'E5',
           mainBatteryPercentage: 84,
           lockBatteryPercentage: 30,
         },
         {
-          vehicleId: 'E 3',
+          vehicleId: 'E6',
           mainBatteryPercentage: 100,
           lockBatteryPercentage: 100,
         },
@@ -148,64 +148,64 @@ export default {
       ],
       'e-scooters': [
         {
-          vehicleId: 'S 1',
+          vehicleId: 'S4',
           mainBatteryPercentage: 12,
           lockBatteryPercentage: 54,
         },
         {
-          vehicleId: 'S 2',
+          vehicleId: 'S5',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 30,
         },
         {
-          vehicleId: 'S 3',
+          vehicleId: 'S6',
           mainBatteryPercentage: 64,
           lockBatteryPercentage: 54,
         },
         {
-          vehicleId: 'S 4',
+          vehicleId: 'S7',
           mainBatteryPercentage: 70,
           lockBatteryPercentage: 30,
         },
       ],
       'e-bike': [
         {
-          vehicleId: 'E 1',
+          vehicleId: 'E7',
           mainBatteryPercentage: 72,
           lockBatteryPercentage: 44,
         },
         {
-          vehicleId: 'E 2',
+          vehicleId: 'E8',
           mainBatteryPercentage: 74,
           lockBatteryPercentage: 80,
         },
         {
-          vehicleId: 'E 3',
+          vehicleId: 'E9',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 10,
         },
         {
-          vehicleId: 'E 4',
+          vehicleId: 'E10',
           mainBatteryPercentage: 64,
           lockBatteryPercentage: 30,
         },
         {
-          vehicleId: 'E 5',
+          vehicleId: 'E11',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 50,
         },
         {
-          vehicleId: 'E 6',
+          vehicleId: 'E12',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 60,
         },
         {
-          vehicleId: 'E 7',
+          vehicleId: 'E13',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 43,
         },
         {
-          vehicleId: 'E 8',
+          vehicleId: 'E14',
           mainBatteryPercentage: 94,
           lockBatteryPercentage: 76,
         },

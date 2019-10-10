@@ -7,7 +7,7 @@ import { Container, Title, Icon } from './styled';
 
 const VehicleTypeTitle = ({ vehicleType }) => (
   <Container>
-    <Title>Middenklasser</Title>
+    <Title>{vehicleType}</Title>
     <Icon>{getVehicleIcon(vehicleType)}</Icon>
   </Container>
 );

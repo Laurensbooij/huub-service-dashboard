@@ -13,7 +13,8 @@ const Container = styled.div`
 const Text = styled.p`
   font-size: 16px;
   margin: 0 0 1px 6px;
-  color: ${(props) => props.theme.colors.accent.grey};
+  color: ${(props) => props.theme.colors.primary.midnightblue};
+  font-weight: 600;
 `;
 
 const Icon = styled.div`

@@ -6,6 +6,7 @@ import vehicleData from 'services/data/vehicles';
 
 import PageHeaderBarContainer from 'common/PageHeaderBarContainer';
 import VehicleTypeTitle from './VehicleTypeTitle';
+import VehicleBatteriesStatus from './VehicleBatteriesStatus';
 import { VehicleName, ExtendedLicensePlate } from './styled';
 
 const VehicleDetail = ({ match: { params } }) => {
@@ -23,6 +24,10 @@ const VehicleDetail = ({ match: { params } }) => {
         <ExtendedLicensePlate vehicleLicense={vehicle.vehicleId}/>
         :
         <VehicleName>{vehicle.vehicleId}</VehicleName>}
+      <VehicleBatteriesStatus
+        mainBatteryPercentage={vehicle.mainBatteryPercentage}
+        lockBatteryPercentage={vehicle.lockBatteryPercentage}
+      />
     </PageHeaderBarContainer>
   );
 };

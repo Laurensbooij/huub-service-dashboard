@@ -1,10 +1,10 @@
 import React from 'react';
 import PT from 'prop-types';
 
-import LicensePlate from './LicensePlate';
-import { VehicleName, ExtendedListItemContainer } from './styled';
+import LicensePlate from 'common/LicensePlate';
+import BatteryStatus from 'common/BatteryStatus';
 
-import BatteryStatus from './BatteryStatus';
+import { VehicleName, ExtendedListItemContainer } from './styled';
 
 const VehicleListItem = ({ vehicle, vehicleType }) => (
   <ExtendedListItemContainer toPath="/test">

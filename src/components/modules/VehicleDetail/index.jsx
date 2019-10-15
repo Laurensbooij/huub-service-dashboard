@@ -9,13 +9,17 @@ import VehicleTypeTitle from './VehicleTypeTitle';
 import VehicleBatteriesStatus from './VehicleBatteriesStatus';
 import { VehicleName, ExtendedLicensePlate } from './styled';
 
-const VehicleDetail = ({ match: { params } }) => {
+const VehicleDetail = ({ match: { url, params } }) => {
   const huubSpotName = vehicleData[params.huubSpot].huubSpotName;
   const vehicle = vehicleData[params.huubSpot].vehicles[params.vehicleType].find((element) => element.vehicleId === params.vehicleSlug);
 
+  /* generate path that can be used to navigate to previous page */
+  const indexOfLastSlash = url.lastIndexOf('/');
+  const previousPageUrl = url.slice(0, indexOfLastSlash);
+
   return (
     <PageHeaderBarContainer
-      to="/"
+      to={previousPageUrl}
       title="Voertuig"
       subTitle={huubSpotName}
     >
@@ -34,6 +38,7 @@ const VehicleDetail = ({ match: { params } }) => {
 
 VehicleDetail.propTypes = {
   match: PT.shape({
+    url: PT.string.isRequired,
     params: PT.object.isRequired,
   }),
 };

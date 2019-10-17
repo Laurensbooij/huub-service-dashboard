@@ -6,7 +6,7 @@ const LicensePlate = ({ vehicleLicense, className }) => (
     <g fill="none" fillRule="evenodd">
       <rect stroke="#0B0C1E" fill="#F1F254" x=".5" y=".5" width="96" height="23" rx="3"/>
       <path d="M3 1h11v22H3c-1.1045695 0-2-.8954305-2-2V3c0-1.1045695.8954305-2 2-2z" fill="#5498F2"/>
-      <text fontFamily="ProximaNova-Semibold, Proxima Nova" fontSize="16" fontWeight="500" fill="#0B0C1E">
+      <text fontFamily="Proxima-nova, sans-serif" fontSize="16" fontWeight="600" fill="#0B0C1E">
         <tspan x="22" y="18">{vehicleLicense}</tspan>
       </text>
       <path d="M7.245 21H6.68l-1.74-2.385V21h-.585v-3.335h.6l1.705 2.31v-2.31h.585V21zm2.725 0H7.915v-3.335H8.5v2.82h1.47V21z" fill="#FFF" fillRule="nonzero"/>
